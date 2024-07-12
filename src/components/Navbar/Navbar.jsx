@@ -6,7 +6,7 @@ const Navbar = ({ toggleSidebar, toggleTheme, isDarkMode, isSidebarOpen }) => {
   };
 
   return (
-      <div className={`flex justify-between items-center h-16 fixed z-10 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900'}   ${isSidebarOpen ? 'w-[85%]' : 'w-full'} shadow-lg`}>
+      <div className={`flex justify-between items-center h-16 fixed z-10 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900'} ${isSidebarOpen?'w-[85%]':'w-full'} shadow-lg`}>
       <div className="flex items-center">
         {!isSidebarOpen && (
           <button onClick={toggleSidebar} className="px-4 focus:outline-none">
@@ -16,6 +16,7 @@ const Navbar = ({ toggleSidebar, toggleTheme, isDarkMode, isSidebarOpen }) => {
           </button>
         )}
         <h1 className="ml-4 text-lg font-bold">Admin Panel</h1>
+      
       </div>
       <div className="flex items-center px-5">
         <button onClick={handleThemeToggle} className="px-4 focus:outline-none">
