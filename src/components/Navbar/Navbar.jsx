@@ -7,7 +7,7 @@ const Navbar = ({ toggleSidebar, toggleTheme, isDarkMode, isSidebarOpen }) => {
   };
 
   return (
-    <div className={`flex justify-between items-center h-16 fixed ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900'} ${isSidebarOpen?'w-[85%]':'w-[100%]'} shadow-lg z-50`}>
+    <div className={`flex justify-between items-center h-16 fixed w-full ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900'} shadow-lg z-50`}>
       {!isSidebarOpen && (
         <button onClick={toggleSidebar} className="px-4 focus:outline-none">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -16,7 +16,7 @@ const Navbar = ({ toggleSidebar, toggleTheme, isDarkMode, isSidebarOpen }) => {
         </button>
       )}
       <h1 className="text-lg font-bold">Admin Panel</h1>
-      <div className="px-4">
+      <div className={`px-4 ${isSidebarOpen?' mr-[15.5%]':'mr-[0]'}`}>
         <button onClick={handleThemeToggle} className="focus:outline-none">
           {isDarkMode ? (
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
