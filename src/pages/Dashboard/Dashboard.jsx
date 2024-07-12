@@ -1,5 +1,7 @@
 import React from 'react';
 import CustomTable from '../../components/CustomTable/CustomTable';
+// import Cards from '../../components/Cards/Cards';
+import AdminPanel from '../../components/Cards/Cards';
 
 const Dashboard = ({ isDarkMode }) => {
   const data = [
@@ -12,8 +14,10 @@ const Dashboard = ({ isDarkMode }) => {
   ];
 
   return (
-    <div className={`container mx-auto p-4 ${isDarkMode ? 'dark' : ''}`}>
+    <div className={`container mx-auto p-2 ${isDarkMode ? 'dark' : ''}`}>
+      <AdminPanel isDarkMode={isDarkMode}/>
       <h1 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Employee Directory</h1>
+      <CustomTable data={data} isDarkMode={isDarkMode} />
       <CustomTable data={data} isDarkMode={isDarkMode} />
     </div>
   );

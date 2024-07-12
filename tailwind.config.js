@@ -1,6 +1,6 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./index.html', './src/**/*.jsx', './src/**/*.js'],
+  mode: 'jit', // Just-In-Time mode
+  content: ['./index.html', './src/**/*.jsx', './src/**/*.js',"./node_modules/flowbite/**/*.jsx"  ], // Update from 'purge' to 'content'
   darkMode: 'class', // Enable dark mode variant
   theme: {
     extend: {
@@ -17,6 +17,6 @@ module.exports = {
     },
   },
   plugins: [
-    // Add any plugins here
-  ],
+    require('flowbite/plugin')
+]
 };
