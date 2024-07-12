@@ -1,9 +1,8 @@
 import React from 'react';
 import CustomTable from '../../components/CustomTable/CustomTable';
-// import Cards from '../../components/Cards/Cards';
 import AdminPanel from '../../components/Cards/Cards';
 
-const Dashboard = ({ isDarkMode }) => {
+const Dashboard = ({ isDarkMode, isSidebarOpen }) => {
   const data = [
     { id: 1, name: 'John Doe', age: 30, position: 'Software Engineer', department: 'Engineering' },
     { id: 2, name: 'Jane Smith', age: 28, position: 'Product Manager', department: 'Product Management' },
@@ -14,13 +13,12 @@ const Dashboard = ({ isDarkMode }) => {
   ];
 
   return (
-    <div className={`container mx-auto ${isDarkMode ? 'dark' : ''} width-[85%]`}>
-      <AdminPanel isDarkMode={isDarkMode}/>
+    <div className={`container mx-auto mt-16 ${isDarkMode ? 'dark' : ''} ${isSidebarOpen ? 'ml-64' : ''}`}>
+      <AdminPanel isDarkMode={isDarkMode} />
       <h1 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Employee Directory</h1>
       <CustomTable data={data} isDarkMode={isDarkMode} />
-      {/* <CustomTable data={data} isDarkMode={isDarkMode} /> */}
     </div>
   );
 };
 
-export default Dashboard;
+export default Dashboard
