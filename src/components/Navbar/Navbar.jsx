@@ -25,7 +25,7 @@ const Navbar = ({ toggleSidebar, toggleTheme, isDarkMode, isSidebarOpen }) => {
   };
 
   return (
-    <div className={`flex justify-between items-center z-0 h-16 fixed top-0 left-0 right-0 z-50 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900'} shadow-lg`}>
+    <div className={`flex justify-between items-center z-0 h-16 fixed top-0 left-0 right-0 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900'} shadow-lg`} style={{zIndex:'0'}}>
       <div className="flex items-center space-x-4 px-4">
         {!isSidebarOpen && (
           <button onClick={toggleSidebar} className="focus:outline-none">

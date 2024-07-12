@@ -20,7 +20,7 @@ const Sidebar = ({ isOpen, toggleSidebar, isDarkMode }) => {
   }, [location.pathname]);
 
   return (
-    <div className={`fixed inset-y-0 left-0 w-64 z-1 px-2 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900'} transform transition duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-64'} z-40`}>
+    <div className={`fixed inset-y-0 left-0 w-64 z-2 px-2 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900'} transform transition duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-64'}`} style={{zIndex:1}}>
       <div className={`flex items-center justify-between h-16 border-b ${isDarkMode ? 'border-gray-800' : 'border-gray-300'}`}>
         <h1 className={`text-lg font-bold px-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Sidebar</h1>
         <button onClick={toggleSidebar} className="px-4 focus:outline-none">
