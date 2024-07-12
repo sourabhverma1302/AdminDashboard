@@ -18,7 +18,7 @@ const Dashboard = ({ isDarkMode }) => {
       <AdminPanel isDarkMode={isDarkMode}/>
       <h1 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Employee Directory</h1>
       <CustomTable data={data} isDarkMode={isDarkMode} />
-      <CustomTable data={data} isDarkMode={isDarkMode} />
+      {/* <CustomTable data={data} isDarkMode={isDarkMode} /> */}
     </div>
   );
 };
